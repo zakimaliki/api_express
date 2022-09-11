@@ -8,7 +8,7 @@ const {protect} = require('../middlewares/auth')
 router
   .get('/', getAllProduct)
   .get('/:id', protect, getProduct)
-  .post('/', protect,upload.single('photo'), insertProduct)
+  .post('/', protect, upload.single('photo'), insertProduct)
   .put('/:id', protect, upload.single('photo'), updateProduct)
   .delete('/:id', protect, deleteProduct)
 

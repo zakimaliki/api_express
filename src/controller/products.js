@@ -39,7 +39,7 @@ const productController = {
   },
   insertProduct: async(req, res) => {
     const PORT = process.env.PORT || 5000
-    const DB_HOST = process.env.DB_HOST || 'localhost'
+    const DB_HOST = process.env.RAILWAY_STATIC_URL
     const photo = req.file.filename;
     const { name,stock,price,description } = req.body
     const {rows: [count]} = await countData()
@@ -50,7 +50,7 @@ const productController = {
       name,
       stock,
       price,
-      photo:`http://${DB_HOST}:${PORT}/img/${photo}`,
+      photo:`http://${DB_HOST}/img/${photo}`,
       description
     }
     insert(data)

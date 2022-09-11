@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(cors())
 app.use(morgan('dev'))
 app.use('/api/v1', mainRouter)
-app.use('/img', express.static('./upload'))
+app.use('/img', express.static('src/upload'))
 app.all('*', (req, res, next) => {
   next(new createError.NotFound())
 })
@@ -25,9 +25,6 @@ app.use((err,req,res,next)=>{
   })
 
 })
-// app.listen(8080, () => {
-//   console.log(`server running on http://${DB_HOST}:${PORT}`)
-// })
 app.listen(PORT, () => {
    console.log(`Listen port at ${PORT}`)
 })
