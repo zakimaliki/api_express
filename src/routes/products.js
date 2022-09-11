@@ -4,7 +4,7 @@ const router = express.Router()
 const upload = require('../middlewares/upload')
 const {getAllProduct,getProduct,insertProduct,updateProduct,deleteProduct} = require('../controller/products')
 const {protect} = require('../middlewares/auth')
-const {hitCacheProductDetail,clearCacheProductDetail} = require('../middlewares/redis')
+// const {hitCacheProductDetail,clearCacheProductDetail} = require('../middlewares/redis')
 
 router
   .get('/', getAllProduct)
