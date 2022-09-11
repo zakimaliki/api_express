@@ -31,7 +31,6 @@ const productController = {
     select(id)
       .then(
         result => {
-        client.setEx(`product/${id}`,60*60,JSON.stringify(result.rows))
         commonHelper.response(res, result.rows, 200, "get data success from database")
         }
       )

@@ -8,7 +8,7 @@ router
 .post('/register',register)
 .post('/login',login)
 .post('/refersh-token',refreshToken)
-.get('/profile',protect,profile)
+.get('/profile',profile)
 
 
 module.exports = router
