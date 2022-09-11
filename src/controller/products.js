@@ -1,7 +1,6 @@
 const createError = require('http-errors')
 const {selectAll,select,countData,findId,insert,update,deleteData} = require('../models/products')
 const commonHelper = require('../helper/common')
-const client = require('../config/redis')
 
 
 const productController = {
