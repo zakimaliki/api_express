@@ -25,6 +25,4 @@ app.use((err,req,res,next)=>{
   })
 
 })
-app.listen(8080, () => {
-  console.log(`server running on http://localhost:${PORT}`)
-})
+app.listen(8080)
